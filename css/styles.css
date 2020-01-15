@@ -2,15 +2,10 @@ body{
     text-align: center;
     background-color: #4E8AA3;
     font-family: 'Source Sans Pro', sans-serif;
-}
-
-#content{
     background-image: url("../images/background.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    padding: 10px;
+    background-repeat: repeat-y;
 }
 
 #game{
@@ -19,7 +14,7 @@ body{
     margin: 10px;
     padding: 10px;
     height: 100%;
-    width: inherit;
+    width: 80%;
 }
 
 #guess{
