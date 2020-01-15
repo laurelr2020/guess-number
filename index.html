@@ -11,14 +11,18 @@
         <div id="content">
             <div id="game">
                 <h1 id="title">Guess the Number</h1>
-                <p id="instructions">
-                    Guess the number that the computer is thinking by entering your guess in the space below
-                </p>
-                
                 <button id="start-button" class="button" onclick="start();">Start</button>
                 <button id="new-game-button" class="button" onclick="newGame();" hidden>Play Again</button>
 
+                <div id="range" hidden>
+                    <p>Choose end points for the range of integers:</p>
+                    <input id="input-range-min" type="text" placeholder="Enter a integer for the low side"/>
+                    <input id="input-range-max" type="text" placeholder="Enter a integer for the high side"/> <br>
+                    <button id="range-button" class="button" onclick="submitRange();">Submit Range</button>
+                </div>
+
                 <div id="guess" hidden>
+                    <p>Guess the number that the computer is thinking by entering your guess in the space below</p>
                     <input id="input-guess" type="text" placeholder="Enter your guess here"/> <br>
                     <button id="guess-button" class="button" onclick="guessNumber();">Submit Guess</button>
                 </div>
