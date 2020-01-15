@@ -7,19 +7,28 @@ function init(){
 }
 
 function start(){
-    document.getElementById("guess").hidden = false;
+    document.getElementById("range").hidden = false;
     document.getElementById("start-button").hidden = true;
-    gameSetup();
 }
 
 function newGame(){
-    document.getElementById("guess").hidden = false;
+    document.getElementById("range").hidden = false;
     document.getElementById("new-game-button").hidden = true;
-    gameSetup();
 }
 
-function gameSetup(){
-    number = getRandomNumber(1, 20);
+function submitRange(){
+    let min = parseInt(document.getElementById("input-range-min").value);
+    let max = parseInt(document.getElementById("input-range-max").value);
+    gameSetup(min, max);
+
+    document.getElementById("guess").hidden = false;
+    document.getElementById("range").hidden = true;
+    document.getElementById("input-range-min").value = "";
+    document.getElementById("input-range-max").value = "";
+}
+
+function gameSetup(min, max){
+    number = getRandomNumber(min, max);
     console.log("number = " + number);
 }
 
