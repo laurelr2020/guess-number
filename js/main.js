@@ -19,12 +19,23 @@ function newGame(){
 function submitRange(){
     let min = parseInt(document.getElementById("input-range-min").value);
     let max = parseInt(document.getElementById("input-range-max").value);
-    gameSetup(min, max);
+    validateInput(min, max) ? document.getElementById("range-button").disabled = false : document.getElementById("range-button").disabled = true ;
 
     document.getElementById("guess").hidden = false;
     document.getElementById("range").hidden = true;
     document.getElementById("input-range-min").value = "";
     document.getElementById("input-range-max").value = "";
+}
+
+function validateInput(min, max){
+    let valid = false;
+    if(Number.isInteger(min) && Number.isInteger(max)){
+        console.log("valid input");
+        return true;
+    }else{
+        console.log("invalid input");
+        return false;
+    }
 }
 
 function gameSetup(min, max){
