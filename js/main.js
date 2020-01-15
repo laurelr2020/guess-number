@@ -19,8 +19,7 @@ function newGame(){
 function submitRange(){
     let min = parseInt(document.getElementById("input-range-min").value);
     let max = parseInt(document.getElementById("input-range-max").value);
-    validateInput(min, max) ? document.getElementById("range-button").disabled = false : document.getElementById("range-button").disabled = true ;
-
+    
     document.getElementById("guess").hidden = false;
     document.getElementById("range").hidden = true;
     document.getElementById("input-range-min").value = "";
