@@ -30,7 +30,7 @@ body{
     color: black;
 }
 
-#instructions{
+p{
     text-shadow: 1px 1px #4E8AA3;
     color: black;
     font-size: larger;
